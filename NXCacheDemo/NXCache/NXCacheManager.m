@@ -179,7 +179,7 @@ static NXCacheManager *instance = nil;
 + (NXCacheManager *)sharedManager {
     @synchronized(self) {
         if (instance == nil) {
-            [[self alloc] init];
+            instance = [[self alloc] init];
         }
     }
     return instance;
